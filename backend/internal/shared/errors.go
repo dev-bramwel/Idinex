@@ -1,0 +1,2 @@
+// custom errors
+package shared
