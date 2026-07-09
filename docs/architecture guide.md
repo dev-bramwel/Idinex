@@ -28,7 +28,7 @@ idinex/
 ├── backend/
 ├── frontend/
 ├── docs/
-├── scripts/
+├── Makefile
 ├── deployments/
 ├── .github/
 ├── docker-compose.yml
@@ -157,15 +157,74 @@ Pagination standardizes page, limit and metadata for list endpoints.
 
 ``` text
 frontend/
+│
 ├── assets/
-├── css/
-├── js/
-├── pages/
+│   ├── fonts/
+│   ├── icons/
+│   ├── images/
+│   ├── logos/
+│   └── illustrations/
+│
 ├── components/
+│   ├── navbar.html
+│   ├── sidebar.html
+│   ├── footer.html
+│   ├── modal.html
+│   ├── spinner.html
+│   ├── empty-state.html
+│   ├── notification.html
+│   └── idea-card.html
+│
+├── css/
+│   ├── base.css
+│   ├── variables.css
+│   ├── typography.css
+│   ├── layout.css
+│   ├── utilities.css
+│   ├── buttons.css
+│   ├── forms.css
+│   ├── navbar.css
+│   ├── dashboard.css
+│   ├── ideas.css
+│   ├── profile.css
+│   ├── auth.css
+│   └── responsive.css
+│
+├── js/
+│   ├── api/
+│   ├── auth/
+│   ├── ideas/
+│   ├── users/
+│   ├── messages/
+│   ├── notifications/
+│   ├── components/
+│   ├── config/
+│   ├── router/
+│   └── utils/
+│
 ├── layouts/
-├── images/
-├── icons/
-└── docs/
+│   ├── auth-layout.html
+│   ├── dashboard-layout.html
+│   └── landing-layout.html
+│
+├── pages/
+│   ├── home.html
+│   ├── login.html
+│   ├── register.html
+│   ├── dashboard.html
+│   ├── ideas.html
+│   ├── create-idea.html
+│   ├── edit-idea.html
+│   ├── idea-details.html
+│   ├── profile.html
+│   ├── messages.html
+│   ├── notifications.html
+│   ├── settings.html
+│   ├── forgot-password.html
+│   └── 404.html
+│
+├── index.html
+└── README.md
 ```
 
 ### CSS
@@ -191,6 +250,30 @@ js/
 API files communicate with the backend only. Feature folders manipulate
 UI. Utilities provide reusable helpers.
 
+## Deployment/
+```text
+deployments/
+│
+├── docker/
+│   ├── backend.Dockerfile
+│   ├── frontend.Dockerfile
+│   └── postgres.Dockerfile
+│
+├── nginx/
+│   ├── nginx.conf
+│   └── default.conf
+│
+├── development/
+│   ├── docker-compose.dev.yml
+│   └── README.md
+│
+├── production/
+│   ├── docker-compose.prod.yml
+│   ├── .env.production.example
+│   └── README.md
+│
+└── README.md
+```
 ## Development Workflow
 
 -   Never commit directly to `main`.

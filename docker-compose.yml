@@ -1,0 +1,17 @@
+# This should reference the dockerfiles on the deployments folder
+# Starts Backend, Frontend, and PostgreSQL in One command: docker compose up
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: deployments/docker/backend.Dockerfile
+
+  frontend:
+    build:
+      context: .
+      dockerfile: deployments/docker/frontend.Dockerfile
+
+  postgres:
+    build:
+      context: .
+      dockerfile: deployments/docker/postgres.Dockerfile
