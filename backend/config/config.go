@@ -1,0 +1,10 @@
+/*
+Loads
+
+PORT
+DATABASE_URL
+JWT_SECRET
+ENVIRONMENT
+SMTP_CONFIG
+*/
+package config
